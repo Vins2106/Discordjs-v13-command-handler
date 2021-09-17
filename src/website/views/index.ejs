@@ -14,7 +14,7 @@
           <img class="nav-brand-img" src="<%= bot.user.displayAvatarURL() %>" alt="logo">
           <%= bot.user.username %>
         </div>
-          <span class="nav-toggle" id="nav"><i class="fas fa-bars"></i></span>
+          <span class="nav-toggle" id="nav" onclick="toggleNav()"><i class="fas fa-bars"></i></span>
         <ul class="navs" id="nav-list">
           <li class="nav-link"><a href="https://discord.com/api/oauth2/authorize?client_id=888330803594022913&permissions=8&scope=bot%20applications.commands" target="_blank">Invite</a></li>
           <li class="nav-link"><a href="#">Support</a></li>
@@ -29,12 +29,12 @@
       let navList = document.getElementById("nav-list");
       let display = false;
       
-      navToggle.onclick = () => {
+      function toggleNav() {        
         if (display) {
-          navList.style.display = "none !important";
+          navList.classList.remove("on")
           display = false;
         } else if (!display) {
-          navList.style.display = "block !important";
+          navList.classList.add("on")
           display = true;
         }
       }

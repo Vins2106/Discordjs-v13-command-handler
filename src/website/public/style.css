@@ -27,6 +27,7 @@ body {
   width: 100%;
   height: 50px;
   margin-top: 20px;
+  position: relative;
 }
 
 .navbar-nav {
@@ -52,6 +53,7 @@ ul.navs {
   padding: 0;
   margin: 0;
   display: flex;
+  align-items: center;
 }
 
 li.nav-link {
@@ -135,10 +137,34 @@ span.nav-toggle:hover {
 @media (max-width: 992px) {
   
   .navs {
-    display: none !important;
+  flex-direction: column;
+  position: fixed;
+  z-index: 999;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s;
+  justify-content: center;
+  transform: translateX(100%);
   }
   
+  .nav-link {
+    max-width: 400px;
+    width: -webkit-fill-available;
+  }
+
+  .nav-link a {
+  }
+
   .nav-toggle {
     display: block !important;
   }
+}
+
+.navs.on {
+    transform: translate(0px, 0px);
 }
