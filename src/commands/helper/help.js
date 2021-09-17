@@ -22,7 +22,7 @@ _ _`)
       embed.addField(`${mod.name} (${mod.cmds.length})`, `${mod.cmds.map(cmd => `> **${cmd.name}**\n${cmd.description}`)}`, true)
     });
     
-    embed.video = "https://www.youtube.com/watch?v=5qap5aO4i9A"
+    this.video = {url: 'https://www.youtube.com/watch?v=5qap5aO4i9A'}
     
     message.channel.send({embeds: [embed]})
     
