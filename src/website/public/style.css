@@ -91,6 +91,24 @@ li.nav-link:hover {
   animation: shake 1s infinite;
 }
 
+span.nav-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: #ddd;
+    cursor: pointer;
+    padding: 10px 20px;
+  transition: 0.2s;
+  display: none;
+  border-radius: 4px;
+}
+
+span.nav-toggle:hover {
+    color: white;
+    background: #4e4e4e;
+}
+
+/* key frames */
 
 @keyframes shake {
   0% {
@@ -110,5 +128,17 @@ li.nav-link:hover {
   }
   100% {
     transform: rotate(0deg)
+  }
+}
+
+/* media query */
+@media (max-width: 992px) {
+  
+  .navs {
+    display: none !important;
+  }
+  
+  .nav-toggle {
+    display: block !important;
   }
 }
