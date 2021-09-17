@@ -2,6 +2,7 @@
 <html>
   <head>
     <%- include("./parts/head.ejs") %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     
@@ -13,6 +14,7 @@
           <img class="nav-brand-img" src="<%= bot.user.displayAvatarURL() %>" alt="logo">
           <%= bot.user.username %>
         </div>
+          <span class="nav-toggle" id="nav"><i class="fas fa-bars"></i></span>
         <ul class="navs">
           <li class="nav-link"><a href="https://discord.com/api/oauth2/authorize?client_id=888330803594022913&permissions=8&scope=bot%20applications.commands" target="_blank">Invite</a></li>
           <li class="nav-link"><a href="#">Support</a></li>
@@ -22,5 +24,8 @@
     </div>
 <!--     navbar end -->
     
+    <script>
+      
+    </script>
   </body>
 </html>
