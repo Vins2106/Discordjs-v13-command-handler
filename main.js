@@ -12,7 +12,7 @@ client.login(process.env.TOKEN)
 client.modules = new Discord.Collection();
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection()
-client.color = "#00F4F"
+client.color = "#00F4FF"
 client.MessageEmbed = Discord.MessageEmbed;
 
 client.sendEmbed = (channel, content) => {

@@ -11,7 +11,9 @@ module.exports = {
     const embed = new Discord.MessageEmbed()
     .setAuthor(client.user.username, client.user.displayAvatarURL({format: "png"}))
     .setColor(client.color)
-    .setDescription(`> prefix :: \`${process.env.PREFIX}\``)
+    .setDescription(`My prefix is \`${process.env.PREFIX}\`
+_ _
+_ _`)
     .setTimestamp()
     
     let mods = client.modules;
@@ -20,7 +22,9 @@ module.exports = {
       embed.addField(`${mod.name} (${mod.cmds.length})`, `${mod.cmds.map(cmd => `> **${cmd.name}**\n${cmd.description}`)}`, true)
     });
     
-    message.channel.send(embed)
+    embed.video = "https://www.youtube.com/watch?v=5qap5aO4i9A"
+    
+    message.channel.send({embeds: [embed]})
     
   },
   slash: null
