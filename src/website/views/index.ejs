@@ -32,9 +32,11 @@
       function toggleNav() {        
         if (display) {
           navList.classList.remove("on")
+          navToggle.classList.remove("on")
           display = false;
         } else if (!display) {
           navList.classList.add("on")
+          navToggle.classList.add("on")
           display = true;
         }
       }

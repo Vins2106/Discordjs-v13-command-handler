@@ -168,3 +168,10 @@ span.nav-toggle:hover {
 .navs.on {
     transform: translate(0px, 0px);
 }
+
+.nav-toggle.on {
+    z-index: 9999;
+    position: fixed;
+    right: 0;
+    margin-right: 10px;
+}
