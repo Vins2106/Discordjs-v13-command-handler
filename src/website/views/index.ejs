@@ -7,14 +7,18 @@
     
 <!--     navbar -->
     <div class="navbar">
-      <div class="nav-brand">
-        <img class="nav-brand-img" src="<%= bot.user.displayAvatarURL() %>" alt="logo">
-        <%= bot.user.username %>
+      <div class="container">
+        <div class="navbar-nav">
+        <div class="nav-brand">
+          <img class="nav-brand-img" src="<%= bot.user.displayAvatarURL() %>" alt="logo">
+          <%= bot.user.username %>
+        </div>
+        <ul class="navs">
+          <li class="nav-link"><a href="#">Invite</a></li>
+          <li class="nav-link"><a href="#">Support</a></li>
+        </ul>           
+        </div>
       </div>
-      <ul class="navs">
-        <li class="nav-link"><a href="#">Invite</a></li>
-        <li class="nav-link"><a href="#">Support</a></li>
-      </ul>
     </div>
 <!--     navbar end -->
     
