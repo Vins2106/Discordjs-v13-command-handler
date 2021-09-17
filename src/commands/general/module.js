@@ -1,5 +1,5 @@
 module.exports = {
-  name: "Helper",
+  name: "General",
   description: "Help you about commands",
   disable: false,
   cmds: []

@@ -6,16 +6,16 @@ module.exports = (client) => {
     
     mods.forEach(mod => {
       
-      fs.readdir(`src/commands/${mods}`, async (err, cmds) => {
+      fs.readdir(`src/commands/${mod}`, async (err, cmds) => {
         
-        let modConfig = require(`../commands/${mods}/module.js`);
+        let modConfig = require(`../commands/${mod}/module.js`);
         if (!modConfig) return;
         
         cmds.forEach(cmd => {
           if (!cmd.endsWith('.js')) return;
           if (cmd == "module.js") return;
           
-          let cmdConfig = require(`../commands/${mods}/${cmd}`);
+          let cmdConfig = require(`../commands/${mod}/${cmd}`);
           if (!cmdConfig) return;
           
           if (cmdConfig.disable) return;
@@ -33,7 +33,7 @@ module.exports = (client) => {
         client.modules.set(modConfig.name, modConfig);
         
       });
-      
+       
     })
     
   });
