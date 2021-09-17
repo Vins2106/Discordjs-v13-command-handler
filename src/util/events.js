@@ -12,7 +12,9 @@ module.exports = (client) => {
       
       if (eConfig.disable) return;
       
-      client.on(eConfig.name, eConfig.run(client))
+      client.on(eConfig.name, async (...args) => {
+        eConfig.run(client, ...args)
+      })
     })
     
   });
