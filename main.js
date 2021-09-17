@@ -13,7 +13,7 @@ client.modules = new Discord.Collection();
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection()
 client.color = "#00F4F"
-client.embed = new 
+client.MessageEmbed = Discord.MessageEmbed;
 
 client.sendEmbed = (channel, content) => {
   const embed = new Discord.MessageEmbed()
