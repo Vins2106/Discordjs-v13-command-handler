@@ -11,10 +11,10 @@ client.login(process.env.TOKEN)
 // utility
 client.modules = new Discord.Collection();
 client.commands = new Discord.Collection();
-client.aliases = new Discord.Collecion()
+client.aliases = new Discord.Collection()
 
 // commands
-require(".src/util/commands.js")(client)
+require("./src/util/commands.js")(client)
 
 // events
 require("./src/util/events.js")(client);
