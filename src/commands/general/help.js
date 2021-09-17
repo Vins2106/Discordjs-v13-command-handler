@@ -5,6 +5,7 @@ module.exports = {
   description: "Show you all commands",
   disable: false,
   owner: false,
+  cd: 10,
   aliases: ["h"],
   run: async (client, message, args) => {
     

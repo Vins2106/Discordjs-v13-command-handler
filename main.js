@@ -22,7 +22,7 @@ client.sendEmbed = (channel, content) => {
   .setDescription(content)
   .setTimestamp()
   
-  channel.send(embed)
+  channel.send({embeds: [embed]})
 }
 
 // commands
@@ -30,3 +30,6 @@ require("./src/util/commands.js")(client)
 
 // events
 require("./src/util/events.js")(client);
+
+// website
+require("./src/website/app.js")(client);
