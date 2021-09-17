@@ -20,7 +20,13 @@ module.exports = (client) => {
           
           if (cmdConfig.disable) return;
           
-          cmdConfig.aliases
+          cmdConfig.aliases.map(a => {
+            client.aliases.set(a, cmdConfig.name)
+          });
+          
+          modConfig.cmds.push(cmdConfig)
+          
+          client.commands.set(cmdConfig.name, cmdConfig);
         });
         
         console.log(`[HANDLER] load ${modConfig.name} modules :: (${cmds.length - 1})`);

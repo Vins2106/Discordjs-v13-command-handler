@@ -12,6 +12,18 @@ client.login(process.env.TOKEN)
 client.modules = new Discord.Collection();
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection()
+client.color = "#00F4F"
+client.embed = new 
+
+client.sendEmbed = (channel, content) => {
+  const embed = new Discord.MessageEmbed()
+  .setAuthor(client.user.username, client.user.displayAvatarURL({format: "png"}))
+  .setColor(client.color)
+  .setDescription(content)
+  .setTimestamp()
+  
+  channel.send(embed)
+}
 
 // commands
 require("./src/util/commands.js")(client)
