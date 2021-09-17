@@ -1,0 +1,17 @@
+{
+  "name": "melody-bot",
+  "description": "A discord music bot",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "dependencies": {
+    "discord.js": "^13.1.0",
+    "fs": "^0.0.2",
+    "mongoose": "^6.0.5"
+  }
+}
