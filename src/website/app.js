@@ -7,7 +7,9 @@ module.exports = async client => {
   app.use(express.static(__dirname + "/public"));  
   
   app.get("/", async (req, res) => {
-    res.render("index.ejs")
+    res.render("index.ejs", {
+      bot: client
+    })
   });
   
   app.listen(process.env.PORT || 3000, () => {
