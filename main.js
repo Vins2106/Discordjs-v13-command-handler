@@ -14,6 +14,10 @@ client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection()
 client.color = "#00F4FF"
 client.MessageEmbed = Discord.MessageEmbed;
+client.config = {
+  owner: "727110220400033865"
+}
+client.cooldown = new Discord.Collection()
 
 client.sendEmbed = (channel, content) => {
   const embed = new Discord.MessageEmbed()

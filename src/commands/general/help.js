@@ -13,7 +13,6 @@ module.exports = {
     .setAuthor(client.user.username, client.user.displayAvatarURL({format: "png"}))
     .setColor(client.color)
     .setDescription(`My prefix is \`${process.env.PREFIX}\`
-_ _
 _ _`)
     .setTimestamp()
     
