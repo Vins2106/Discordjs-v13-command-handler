@@ -6,6 +6,7 @@ module.exports = {
   disable: false,
   owner: false,
   cd: 5,
+  nodm: true,
   aliases: ["p"],
   run: async (client, message, args) => {
     
